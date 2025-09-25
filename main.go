@@ -4,18 +4,20 @@ import ("fmt")
 
 type Name struct{
 	Name string
+	Age int
 }
 
 
 func main () {
-	enzo := Initname("enzo")
-	lilou := Initname("lilou")
+	enzo := Initname("enzo",17)
+	lilou := Initname("lilou",18)
 	fmt.Println(enzo)
 	fmt.Println(lilou)
 }
 
-func Initname (name1 string)Name{
+func Initname (name string, age int)Name{
 	return Name {
-		Name: name1,
+		Name: name,
+		Age: age,
 	}
 }
